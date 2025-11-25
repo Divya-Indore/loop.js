@@ -1,0 +1,28 @@
+// Write a program  to take a number from the user and print the following patterns with the input given by the user:
+
+// Test Case1:
+// Input:
+// 5
+// Output:
+// *
+// * *
+// *    *
+// *       *
+// * * * * *
+
+let n = 5;
+
+for (let i = 1; i <= n; i++) {
+
+    if (i === 1) {
+        console.log("*");
+    }
+
+    else if (i < n) {
+        console.log("*" + " ".repeat(2*i - 3) + "*");
+    }
+
+    else {
+        console.log("* ".repeat(n).trim());
+    }
+}
