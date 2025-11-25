@@ -1,0 +1,36 @@
+// Write a program to find the Highest Common Factor (HCF) of a given set of numbers. The HCF is the largest number that divides all the given numbers without leaving a remainder.
+// To do this, we'll ask the user to enter a value 'n' which represents the number of input numbers. Then, the user will input 'n' numbers. We'll calculate the HCF of these numbers.
+// Can you Write a program to determine the HCF of 'n' given numbers?
+
+// Test Case1:
+// Input:
+// 4
+// 12
+// 18
+// 24
+// 30
+// Output:
+// 6
+// Explanation:
+// In this test case, the user inputs four numbers: 12, 18, 24, and 30. The program then calculates the HCF of these numbers, which is found to be 6. This means that 6 is the largest number that can divide all the given numbers (12, 18, 24, and 30) without leaving a remainder.
+
+
+let numbers = [12, 18, 24, 30];
+
+
+let hcf = numbers[0];
+
+for (let i = 1; i < numbers.length; i++) {
+    let a = hcf;
+    let b = numbers[i];
+
+    while (b !== 0) {
+        let temp = b;
+        b = a % b;
+        a = temp;
+    }
+
+    hcf = a;
+}
+
+console.log("HCF is: " + hcf);
