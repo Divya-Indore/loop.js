@@ -1,0 +1,40 @@
+// Write a program to take value N from the user and print the following pattern based on the user input.
+
+// Note: Use nested loops and not string multiplication to print these patterns.
+
+// Test Case1:
+// Input:
+// 3
+// Output:
+// *
+// * *
+// * * *
+
+// 	Test Case2:
+// 	Input:
+// 	5
+// 	Output:
+// 	*
+//              * *
+//              * * *
+//              * * * *
+//              * * * * *
+
+
+let n = 5;   
+
+for (let i = 1; i <= n; i++) {
+    let row = "";
+
+    for (let j = 1; j <= i; j++) {
+        row += "* ";
+    }
+
+    console.log(row);
+}
+
+// shortcut
+let n = 3;
+for (let i = 1; i <= n ; i++){
+    console.log("*" .repeat(i));
+}
