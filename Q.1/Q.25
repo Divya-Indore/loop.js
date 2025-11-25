@@ -1,0 +1,51 @@
+// Write a program  to obtain the sum of a given number of terms (n) for a given value of X in the following mathematical series: (Input X and N from the user)
+
+// i) X+(X^2)/2+(X^3)/3+(X^4)/4 ....upto n terms
+
+// ii) X-(X^3)/3+(X^5)/5-(X^7)/7+(X^9)/9-.... Up to n terms
+
+// iii) X-(X^3)/3!+(X^5)/5!-(X^7)/7!+ .... up to n terms
+
+// --> if user entered X = 2 and N= 6 then first series will become -> 2+(2^2)/2+(2^3)/3+(2^4)/4+(2^5)/5+(2^6)/6 then output will be 27.73
+
+// --> For the same X and N, the second series will become -> 2-(2^3)/3+(2^5)/5-(2^7)/7+(2^9)/9-(2^11)/11 then the output will be -141.84
+
+// --> For the same X and N, the third series will become -> 2-(2^3)/3!+(2^5)/5!-(2^7)/7!+(2^9)/9!-(2^11)/11! then the output will be 0.9092
+
+
+let x = 2;
+let n = 6;
+
+
+let sum1 = 0;
+for(let i = 1; i <= n ; i++){
+    sum1 = sum1 + (x**i)/i;
+}
+
+
+let sum2 = 0;
+let sing = 1;
+let power = 1;
+for (let i = 1; i <= n; i++){
+    let term = (x ** power) / power;
+    sum2 = sum2 + (sing * term);
+    sing = sing * -1;
+    power = power + 2;
+}
+
+
+let sum3 = 0;
+sing = 1;
+power = 1;
+for(let i = 1; i <= n; i++){
+    let fact = 1;
+    for (let j = 1; j <= power; j++){  
+        fact = fact * j;
+    }
+    let term = (x ** power) / fact;
+    sum3 = sum3 + (sing * term);
+    sing = sing * -1;
+    power = power + 2;
+}
+
+console.log(sum1, sum2, sum3);
