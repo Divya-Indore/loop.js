@@ -1,0 +1,27 @@
+// Write a program to take two numbers from the user and obtain the HCF and LCM of two numbers.
+
+// Test Case1:
+// Input:
+// 12
+// 15
+// Output:
+// 3
+// 60
+let num1 = 12;
+let num2 = 15;
+let hcf = 1;
+
+for (let i = 1; i <= Math.min(num1, num2); i++) {
+
+    if (num1 % i === 0) {         
+        if (num2 % i === 0) {     
+            hcf = i;
+        }
+    }
+
+}
+
+let lcm = (num1 * num2) / hcf;
+
+console.log(hcf);
+console.log(lcm);
