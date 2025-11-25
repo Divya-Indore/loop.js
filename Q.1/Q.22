@@ -1,0 +1,32 @@
+Write a program to find the maximum and minimum values among a given set of numbers. The maximum value is the largest number, and the minimum value is the smallest number in the set.
+// To do this, we'll ask the user to enter a value 'n', which represents the number of input numbers. Then, the user will input 'n' numbers. We'll compare these numbers and determine the maximum and minimum values.
+// Can you Write a program to find the maximum and minimum values among 'n' given numbers?
+
+// Test Case1:
+// Input:
+// 5
+// 10
+// 5
+// 8
+// 3
+// 12
+// Output:
+// 12
+// 3
+// Explanation:
+// In this test case, the user inputs five numbers: 10, 5, 8, 3, and 12. The program then calculates the maximum and minimum values among these numbers. The maximum value is found to be 12, which is the largest number in the set. The minimum value is found to be 3, which is the smallest number in the set.
+
+
+let n = 6;
+let num = [5,10,5,8,3,12];
+let maximum = num[0];
+let minimum = num [0];
+for(let i = 1; i <= n; i++){
+    if (num[i] > maximum){
+        maximum = num [i];
+    }
+    if (num[i] < minimum){
+        minimum = num [i];
+    }
+}
+console.log(maximum,minimum);
