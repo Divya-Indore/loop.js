@@ -1,0 +1,23 @@
+// Write a program  to take a number from the user and print the following patterns with the input given by the user:
+
+// Test Case1:
+// Input:
+// 6
+// Output:
+// *
+// * *
+// * * * 
+// * * * *
+// * * * * *
+// * * * * * *
+let n = 6;  
+
+for (let i = 1; i <= n; i++) {
+    let row = "";
+
+    for (let j = 1; j <= i; j++) {
+        row += "* ";
+    }
+
+    console.log(row);
+}
