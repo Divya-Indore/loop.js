@@ -1,0 +1,22 @@
+// Write a program to find the third max of given N numbers.
+// If N=5 and if entered 5 numbers are 2,1,4,100,64 then output should be 4 as this is the third maximum number among those 5 numbers.
+
+
+let numbers = [2, 1, 4, 100, 64];
+let n = 5;
+
+for (let i = 0; i < n; i++) {
+    for (let j = i + 1; j < n; j++) {
+        if (numbers[i] < numbers[j]) {
+            let temp = numbers[i];
+            numbers[i] = numbers[j];
+            numbers[j] = temp;
+        }
+    }
+}
+
+if (n >= 3) {
+    console.log(numbers[2]);  
+} else {
+    console.log("Not enough numbers to find third maximum");
+}
