@@ -1,0 +1,22 @@
+// Write a program to take two integers M, and N and print the product of numbers in the range  M to N.
+
+// Test Case1:
+// Input:
+// 2
+// 7
+
+ // Output:
+// 5040
+// Explanation:
+// Output should be 5040 as the product of numbers (2*3*4*5*6*7=5040)
+
+let M = 2;
+let N = 7;
+
+let product = 1;
+
+for (let i = M; i <= N; i++) {
+    product *= i;
+}
+
+console.log(product);
