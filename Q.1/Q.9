@@ -1,0 +1,25 @@
+// Write a program to take a number from the user and show how the factors of a given number can be obtained. A factor is a number that can divide another number evenly without leaving a remainder.
+
+// Test Case1:
+// Input:
+// 12
+// Output:
+// 1 
+// 2
+// 3
+// 4
+// 6
+// 12
+
+// Test Case2:
+// Input:
+// 25
+// Output:
+// 1 
+let num = 12;  
+
+for (let i = 1; i <= num; i++) {
+    if (num % i === 0) {
+        console.log(i);
+    }
+}
