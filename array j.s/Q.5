@@ -1,0 +1,21 @@
+// Write a program to print the sum of all the odd numbers and even numbers in the given array.
+// Note: In the output, you should print odd numbers sum and even numbers sum in this order only.
+// L = {23, 45, 32, 25, 46,33, 71, 90}
+// Output:
+// 197
+// 168
+let L = [23, 45, 32, 25, 46, 33, 71, 90];
+
+let oddSum = 0;
+let evenSum = 0;
+
+for (let i = 0; i < L.length; i++) {
+    if (L[i] % 2 === 0) {
+        evenSum = evenSum + L[i];
+    } else {
+        oddSum = oddSum + L[i];
+    }
+}
+
+console.log(oddSum , evenSum);
+
