@@ -1,0 +1,35 @@
+
+// Write a program to take a sorted array from the user as input and find a number using Binary Search the array.
+
+// Test Case1:
+// Input:
+// 1 2 3 4 5
+// 5
+// Output:
+// Yes
+
+let arr = [1, 2, 3, 4, 5];
+let target = 5;
+
+let start = 0;            
+let end = arr.length - 1;
+let found = false;
+
+while (start <= end) {
+    let mid = Math.floor((start + end) / 2); 
+
+    if (arr[mid] === target) {
+        found = true;
+        break;
+    } else if (arr[mid] < target) {
+        start = mid + 1;
+    } else {
+        end = mid - 1;
+    }
+}
+
+if (found) {
+    console.log("Yes");
+} else {
+    console.log("No");
+}
