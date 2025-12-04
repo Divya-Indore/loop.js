@@ -1,0 +1,34 @@
+// In a certain hospital, the weights of newborn babies are recorded each month and then processed at the end of the month to determine the following:
+// 1. Mean weight of the babies
+// 2. maximum of the weights
+// 3. Minimum the weights.
+// Write a program to show how the weights can be stored as an array first and then processed to determine the desired outputs. Input n from the user where n is the number of babies born in a particular month.
+
+let n = 3;
+let weights = [2.8, 3.4 , 4.3];
+
+let sum = 0;
+
+for (let i = 0; i < n; i++) {
+    sum = sum + weights[i];
+}
+
+let max = weights[0];
+let min = weights[0];
+
+for (let j = 0; j < n; j++) {
+    if (weights[j] > max) {
+        max = weights[j];
+    }
+
+    if (weights[j] < min) {
+        min = weights[j];
+    }
+}
+
+let mean = sum / n;
+
+console.log("Mean =", mean);
+console.log("Max =", max);
+console.log("Min =", min);
+
