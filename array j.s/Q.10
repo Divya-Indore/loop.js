@@ -1,0 +1,13 @@
+// Write a program to count the total occurrences of a number in the array. Input the numbers from the user.
+
+
+let arr = [6,3,5,3,7,3,2];
+let num = 6;
+let count = 0;
+for (let i = 0; i < 7 ; i ++){
+    if (arr [i] === num){
+        count ++ ;
+    }
+}
+
+console.log(num,count);
