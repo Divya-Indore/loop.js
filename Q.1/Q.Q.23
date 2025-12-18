@@ -1,0 +1,38 @@
+let max = [2, 1, 4, 100, 64];
+let n = 5;
+
+
+let i = 0;
+while (i < n) {
+  
+    let j = i + 1;
+    while (j < n) {
+        if (max[i] < max[j]) {
+            let temp = max[i];
+            max[i] = max[j];
+            max[j] = temp;
+        }
+        j++;
+    }
+    i++;
+}
+
+
+console.log(max[2]);
+
+// let max = [2, 1, 4, 100, 64]; 
+// let n = 5;
+
+
+// for (let i = 0; i < n; i++) {
+//     for (let j = i + 1; j < n; j++) {
+//         if (max[i] < max[j]) {
+//             let temp = max[i];
+//             max[i] = max[j];
+//             max[j] = temp;
+//         }
+//     }
+// }
+
+
+// console.log(max[2]);
