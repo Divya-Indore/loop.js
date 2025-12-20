@@ -1,0 +1,54 @@
+
+// Write a program to take an unsorted array of size N that contains only non-negative integers, and find a contiguous subarray that adds to a given number S. In case of multiple subarrays, return the subarray which comes first on moving from left to right. Let us say the array is 3, 6, 7, 5, 10. And the value of S = 12. The output should be: 7, 5
+
+// Test Case1:
+// Input:
+// 3 6 7 5 10
+// 12
+// Output:
+// 7 5
+
+let arr = [3, 6, 7, 5, 10];
+let S = 12;
+for (let i = 0; i < arr.length; i++) {
+    let sum = 0;
+    let output = "";
+    for (let j = i; j < arr.length; j++) {
+        sum += arr[j];
+        output += arr[j] + " ";
+        if (sum === S) {
+            console.log(output);
+            i = arr.length; 
+          
+        } else if (sum > S) {
+    
+        }
+    }
+}
+
+
+while loop :
+
+
+let arr = [3, 6, 7, 5, 10];
+let S = 12;
+
+let i = 0;
+while (i < arr.length) {
+    let sum = 0;
+    let output = "";
+    let j = i;
+    while (j < arr.length) {
+        sum += arr[j];
+        output += arr[j] + " ";
+        if (sum === S) {
+            console.log(output);
+            i = arr.length; 
+            break;
+        } else if (sum > S) {
+            break;
+        }
+        j++;
+    }
+    i++;
+}
