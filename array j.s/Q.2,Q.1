@@ -1,0 +1,66 @@
+// Write a program to add two matrices and store them in a separate matrix.
+let matrix1 = [
+    [1, 2, 3],
+    [4, 5, 6]
+];
+
+let matrix2 = [
+    [7, 8, 9],
+    [10, 11, 12]
+];
+
+
+let rows = matrix1.length;
+let cols = matrix1[0].length;
+
+let result = [];
+for (let i = 0; i < rows; i++) {
+    result[i] = [];
+    for (let j = 0; j < cols; j++) {
+        result[i][j] = matrix1[i][j] + matrix2[i][j];
+    }
+}
+
+
+console.log("Sum of the two matrices:");
+for (let i = 0; i < rows; i++) {
+    console.log(result[i]);
+}
+
+while loop :
+
+
+let matrix1 = [
+    [1, 2, 3],
+    [4, 5, 6]
+];
+
+let matrix2 = [
+    [7, 8, 9],
+    [10, 11, 12]
+];
+
+let rows = matrix1.length;
+let cols = matrix1[0].length;
+
+let result = [];
+
+
+let i = 0;
+while (i < rows) {
+    result[i] = [];
+    let j = 0;
+    while (j < cols) {
+        result[i][j] = matrix1[i][j] + matrix2[i][j];
+        j++;
+    }
+    i++;
+}
+
+
+i = 0;
+console.log("Sum of the two matrices:");
+while (i < rows) {
+    console.log(result[i]);
+    i++;
+}
