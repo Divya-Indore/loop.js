@@ -1,0 +1,49 @@
+// Write a program to take two sorted arrays from the user as input and Merge them into a single sorted array
+
+// 	Test Case1:
+// Input:
+// 1 2 
+// 3 4
+// Output:
+// 1 2 3 4
+
+FOOR LOOP:-
+
+let arr1 = [1, 2];
+let arr2 = [3, 4];
+
+let output = "";
+
+for (let i = 0; i < arr1.length; i++) {
+    output = output + arr1[i] + " ";
+}
+
+
+for (let i = 0; i < arr2.length; i++) {
+    output = output + arr2[i] + " ";
+}
+
+
+console.log(output);
+
+
+WHILE LOOP :-
+
+let arr1 = [1, 2];
+let arr2 = [3, 4];
+
+let output = "";
+
+let i = 0;
+while (i < arr1.length) {
+    output = output + arr1[i] + " ";
+    i++;
+}
+
+let j = 0;
+while (j < arr2.length) {
+    output = output + arr2[j] + " ";
+    j++;
+}
+
+console.log(output);
