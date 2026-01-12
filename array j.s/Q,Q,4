@@ -1,0 +1,68 @@
+// Write a program to multiply two matrices and store the result in a separate matrix.
+FOOR loop :-
+
+
+let matrixA = [
+  [1, 2, 3],
+  [4, 5, 6]
+];
+
+let matrixB = [
+  [7, 8],
+  [9, 10],
+  [11, 12]
+];
+
+let result = [];
+
+
+for (let i = 0; i < matrixA.length; i++) {
+  result[i] = [];
+  for (let j = 0; j < matrixB[0].length; j++) {
+    result[i][j] = 0;
+    for (let k = 0; k < matrixA[0].length; k++) {
+      result[i][j] += matrixA[i][k] * matrixB[k][j];
+    }
+  }
+}
+
+
+console.log("Matrix Multiplication Result:");
+console.log(result);
+
+
+
+while loop :-
+let matrixA = [
+  [1, 2, 3],
+  [4, 5, 6]
+];
+
+let matrixB = [
+  [7, 8],
+  [9, 10],
+  [11, 12]
+];
+
+let result = [];
+let i = 0;
+while (i < matrixA.length) {
+  result[i] = [];
+  let j = 0;
+  while (j < matrixB[0].length) {
+    result[i][j] = 0;
+    let k = 0;
+    while (k < matrixA[0].length) {
+      result[i][j] = result[i][j] + matrixA[i][k] * matrixB[k][j];
+      k = k + 1;
+    }
+    j = j + 1;
+  }
+  i = i + 1;
+}
+console.log("Matrix Multiplication Result:",result);
+
+
+
+
+
