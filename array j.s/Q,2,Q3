@@ -1,0 +1,48 @@
+// Write a program to transpose matrix A. Store the result in a separate matrix.
+FOOR LOOP :-
+let matrixA = [
+  [1, 2, 3],
+  [4, 5, 6]
+];
+
+
+let transpose = [];
+
+
+for (let i = 0; i < matrixA[0].length; i++) {
+  transpose[i] = [];
+  for (let j = 0; j < matrixA.length; j++) {
+    transpose[i][j] = matrixA[j][i]; 
+  }
+}
+
+
+console.log("Transpose of Matrix A:" , transpose);
+
+WHILE LOOP ;-
+
+let matrixA = [
+  [1, 2, 3],
+  [4, 5, 6]
+];
+
+
+let transpose = [];
+
+
+let i = 0;
+
+while (i < matrixA[0].length) {  
+  transpose[i] = []; 
+  let j = 0;
+  while (j < matrixA.length) {   
+    transpose[i][j] = matrixA[j][i];  
+    j = j + 1; 
+  }
+  i = i + 1;
+}
+
+
+console.log("Transpose of Matrix A:" , transpose);
+
+
