@@ -1,0 +1,45 @@
+
+// Write a program to find the position of an element in a 2D array or Matrix.
+FOR LOOP :-
+
+let matrix = [
+  [10, 20, 30],
+  [40, 50, 60],
+  [70, 80, 90]
+];
+
+let target =50;
+
+for (let i = 0; i < matrix.length; i++) {
+  for (let j = 0; j < matrix[i].length; j++) {
+    if (matrix[i][j] == target)
+      console.log("Row:", i, "Column:", j);
+  }
+}
+
+
+
+WHILE LOOP :-
+
+let matrix = [
+  [10, 20, 30],
+  [40, 50, 60],
+  [70, 80, 90]
+];
+
+let target = 50;
+
+let i = 0;
+
+while (i < matrix.length) {
+  let j = 0;
+
+  while (j < matrix[i].length) {
+    if (matrix[i][j] == target) {
+      console.log("Row:", i, "Column:", j);
+    }
+    j++;
+  }
+
+  i++;
+}
